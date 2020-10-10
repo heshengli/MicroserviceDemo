@@ -1,0 +1,113 @@
+version: '3.7'
+
+services:
+  
+  internal-gateway:
+    image: 'volosoft/microservice-demo-internal-gateway:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: gateways/InternalGateway.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - redis
+      - sqlserver
+      - identity-service
+      - product-service
+      - blogging-service
+  
+  backend-admin-app-gateway:
+    image: 'volosoft/microservice-demo-backend-admin-app-gateway:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: gateways/BackendAdminAppGateway.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - redis
+      - sqlserver
+      - identity-service
+      - product-service
+  
+  public-website-gateway:
+    image: 'volosoft/microservice-demo-public-website-gateway:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: gateways/PublicWebSiteGateway.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - redis
+      - blogging-service
+      - product-service
+  
+  blogging-service:
+    image: 'volosoft/microservice-demo-blogging-service:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: microservices/BloggingService.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - mongodb
+      - redis
+  
+  identity-service:
+    image: 'volosoft/microservice-demo-identity-service:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: microservices/IdentityService.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - rabbitmq
+      - redis
+      - sqlserver
+  
+  product-service:
+    image: 'volosoft/microservice-demo-product-service:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: microservices/ProductService.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - sqlserver
+      - redis
+  
+  tenant-management-service:
+    image: 'volosoft/microservice-demo-tenant-management-service:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: microservices/TenantManagementService.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - sqlserver
+      - redis
+  
+  auth-server:
+    image: 'volosoft/microservice-demo-auth-server:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: applications/AuthServer.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - redis
+      - rabbitmq
+      - identity-service
+  
+  backend-admin-app:
+    image: 'volosoft/microservice-demo-backend-admin-app:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: applications/BackendAdminApp.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - backend-admin-app-gateway
+  
+  public-website:
+    image: 'volosoft/microservice-demo-public-website:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: applications/PublicWebSite.Host/Dockerfile
+    depends_on:
+      - elasticsearch
+      - public-website-gateway
+
+volumes:
+  dbdata:
+  esdata:

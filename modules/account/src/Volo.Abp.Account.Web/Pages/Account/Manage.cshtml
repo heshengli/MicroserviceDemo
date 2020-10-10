@@ -1,0 +1,34 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.Account.Localization
+@using Volo.Abp.Account.Web.Pages.Account
+@using Volo.Abp.AspNetCore.Mvc.UI.Theming
+@inject IThemeManager ThemeManager
+@inject IHtmlLocalizer<AccountResource> L
+@model ManageModel
+@{
+    Layout = ThemeManager.CurrentTheme.GetApplicationLayout();
+}
+@section scripts {
+    <abp-script-bundle name="@typeof(ManageModel).FullName"/>
+}
+
+<div id="ProfileManagementWrapper">
+    <abp-card>
+        <abp-card-body>
+            <abp-tabs tab-style="PillVertical" vertical-header-size="_3">
+                @foreach (var group in Model.ProfileManagementPageCreationContext.Groups)
+                {
+                    <abp-tab title="@group.DisplayName">
+                        <h2>@group.DisplayName</h2>
+                        <hr class="my-4" />
+                        @await Component.InvokeAsync(group.ComponentType, new
+                        {
+                            parameter = group.Parameter
+                        })
+                    </abp-tab>
+                }
+            </abp-tabs>
+        </abp-card-body>
+    </abp-card>
+</div>

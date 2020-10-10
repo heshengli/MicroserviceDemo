@@ -1,0 +1,136 @@
+2020-10-09 11:13:54.039 +08:00 [INF] Starting PublicWebSite.Host.
+2020-10-09 11:14:13.064 +08:00 [INF] Loaded ABP modules:
+2020-10-09 11:14:13.069 +08:00 [INF] - Volo.Abp.Castle.AbpCastleCoreModule
+2020-10-09 11:14:13.069 +08:00 [INF] - Volo.Abp.Autofac.AbpAutofacModule
+2020-10-09 11:14:13.069 +08:00 [INF] - Volo.Abp.Http.AbpHttpAbstractionsModule
+2020-10-09 11:14:13.069 +08:00 [INF] - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2020-10-09 11:14:13.069 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2020-10-09 11:14:13.069 +08:00 [INF] - Volo.Abp.Security.AbpSecurityModule
+2020-10-09 11:14:13.069 +08:00 [INF] - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Uow.AbpUnitOfWorkModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Data.AbpDataModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Settings.AbpSettingsModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Timing.AbpTimingModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Json.AbpJsonModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Minify.AbpMinifyModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Http.AbpHttpModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Threading.AbpThreadingModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Validation.AbpValidationModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Http.Client.AbpHttpClientModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Auditing.AbpAuditingModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.EventBus.AbpEventBusModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Guids.AbpGuidsModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Domain.AbpDddDomainModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationContractsModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Authorization.AbpAuthorizationModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Features.AbpFeaturesModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Serialization.AbpSerializationModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.Caching.AbpCachingModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.Client.AbpAspNetCoreMvcClientModule
+2020-10-09 11:14:13.070 +08:00 [INF] - Volo.Abp.AspNetCore.Authentication.OAuth.AbpAspNetCoreAuthenticationOAuthModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.IdentityModel.AbpIdentityModelModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.Http.Client.IdentityModel.AbpHttpClientIdentityModelModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.Http.Client.IdentityModel.Web.AbpHttpClientIdentityModelWebModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.UI.AbpUiModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.AbpAspNetCoreMvcUiBasicThemeModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Blogging.BloggingDomainSharedModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Blogging.BloggingApplicationContractsModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Blogging.BloggingHttpApiClientModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Blogging.BloggingHttpApiModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2020-10-09 11:14:13.071 +08:00 [INF] - Volo.Blogging.BloggingWebModule
+2020-10-09 11:14:13.071 +08:00 [INF] - ProductManagement.ProductManagementDomainSharedModule
+2020-10-09 11:14:13.071 +08:00 [INF] - ProductManagement.ProductManagementApplicationContractsModule
+2020-10-09 11:14:13.071 +08:00 [INF] - ProductManagement.ProductManagementHttpApiClientModule
+2020-10-09 11:14:13.071 +08:00 [INF] - PublicWebSite.Host.PublicWebSiteHostModule
+2020-10-09 11:14:16.761 +08:00 [INF] Initialized all ABP modules.
+2020-10-09 11:14:16.777 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-09 11:14:16.777 +08:00 [INF] Hosting environment: Development
+2020-10-09 11:14:16.778 +08:00 [INF] Content root path: F:\Code Source\abp-samples-master\MicroserviceDemo\applications\PublicWebSite.Host
+2020-10-09 11:14:16.834 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44335/  
+2020-10-09 11:17:44.644 +08:00 [INF] Starting PublicWebSite.Host.
+2020-10-09 11:17:55.348 +08:00 [INF] Loaded ABP modules:
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Castle.AbpCastleCoreModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Autofac.AbpAutofacModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Http.AbpHttpAbstractionsModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Security.AbpSecurityModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Uow.AbpUnitOfWorkModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Data.AbpDataModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Settings.AbpSettingsModule
+2020-10-09 11:17:55.349 +08:00 [INF] - Volo.Abp.Timing.AbpTimingModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Json.AbpJsonModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Minify.AbpMinifyModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Http.AbpHttpModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Threading.AbpThreadingModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Validation.AbpValidationModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Http.Client.AbpHttpClientModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Auditing.AbpAuditingModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.EventBus.AbpEventBusModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Guids.AbpGuidsModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Domain.AbpDddDomainModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationContractsModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Authorization.AbpAuthorizationModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Features.AbpFeaturesModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Serialization.AbpSerializationModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Caching.AbpCachingModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.Client.AbpAspNetCoreMvcClientModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Authentication.OAuth.AbpAspNetCoreAuthenticationOAuthModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.IdentityModel.AbpIdentityModelModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Http.Client.IdentityModel.AbpHttpClientIdentityModelModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.Http.Client.IdentityModel.Web.AbpHttpClientIdentityModelWebModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.UI.AbpUiModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.AbpAspNetCoreMvcUiBasicThemeModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Blogging.BloggingDomainSharedModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Blogging.BloggingApplicationContractsModule
+2020-10-09 11:17:55.350 +08:00 [INF] - Volo.Blogging.BloggingHttpApiClientModule
+2020-10-09 11:17:55.351 +08:00 [INF] - Volo.Blogging.BloggingHttpApiModule
+2020-10-09 11:17:55.351 +08:00 [INF] - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2020-10-09 11:17:55.351 +08:00 [INF] - Volo.Blogging.BloggingWebModule
+2020-10-09 11:17:55.351 +08:00 [INF] - ProductManagement.ProductManagementDomainSharedModule
+2020-10-09 11:17:55.351 +08:00 [INF] - ProductManagement.ProductManagementApplicationContractsModule
+2020-10-09 11:17:55.351 +08:00 [INF] - ProductManagement.ProductManagementHttpApiClientModule
+2020-10-09 11:17:55.351 +08:00 [INF] - PublicWebSite.Host.PublicWebSiteHostModule
+2020-10-09 11:17:57.264 +08:00 [INF] Initialized all ABP modules.
+2020-10-09 11:17:57.908 +08:00 [INF] Now listening on: https://localhost:44335
+2020-10-09 11:17:57.910 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-09 11:17:57.910 +08:00 [INF] Hosting environment: Development
+2020-10-09 11:17:57.910 +08:00 [INF] Content root path: F:\Code Source\abp-samples-master\MicroserviceDemo\applications\PublicWebSite.Host
