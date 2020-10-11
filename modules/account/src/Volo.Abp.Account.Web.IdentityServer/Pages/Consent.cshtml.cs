@@ -50,21 +50,16 @@ namespace Volo.Abp.Account.Web.Pages
                 throw new ApplicationException($"No consent request matching request: {ReturnUrl}");
             }
 
-            //var client = await _clientStore.FindEnabledClientByIdAsync(request.ClientId);
-            var client = await _clientStore.FindEnabledClientByIdAsync(request.Client.ClientId);
+            var client = await _clientStore.FindEnabledClientByIdAsync(request.ClientId);
             if (client == null)
             {
-                //throw new ApplicationException($"Invalid client id: {request.ClientId}");
-                throw new ApplicationException($"Invalid client id: {request.Client.ClientId}");
+                throw new ApplicationException($"Invalid client id: {request.ClientId}");
             }
 
-            //var resources = await _resourceStore.FindEnabledResourcesByScopeAsync(request.ScopesRequested);
-            var resources = await _resourceStore.FindEnabledResourcesByScopeAsync(request.ValidatedResources.GetRequiredScopeValues());
+            var resources = await _resourceStore.FindEnabledResourcesByScopeAsync(request.ScopesRequested);
             if (resources == null || (!resources.IdentityResources.Any() && !resources.ApiResources.Any()))
             {
-                //throw new ApplicationException($"No scopes matching: {request.ScopesRequested.Aggregate((x, y) => x + ", " + y)}");
-                throw new ApplicationException($"No scopes matching: {request.ValidatedResources.GetRequiredScopeValues().Aggregate((x, y) => x + ", " + y)}");
-
+                throw new ApplicationException($"No scopes matching: {request.ScopesRequested.Aggregate((x, y) => x + ", " + y)}");
             }
 
             ClientInfo = new ClientInfoModel(client);
@@ -72,9 +67,7 @@ namespace Volo.Abp.Account.Web.Pages
             {
                 RememberConsent = true,
                 IdentityScopes = resources.IdentityResources.Select(x => CreateScopeViewModel(x, true)).ToList(),
-                //ApiScopes = resources.ApiResources.SelectMany(x => x.Scopes).Select(x => CreateScopeViewModel(x, true)).ToList()
-                ApiScopes = resources.ApiResources.Select(x => CreateScopeViewModel(x, true)).ToList()
-
+                ApiScopes = resources.ApiResources.SelectMany(x => x.Scopes).Select(x => CreateScopeViewModel(x, true)).ToList()
             };
 
             if (resources.OfflineAccess)
@@ -111,9 +104,7 @@ namespace Volo.Abp.Account.Web.Pages
 
             if (ConsentInput.UserDecision == "no")
             {
-                //grantedConsent = ConsentResponse.Denied;
-                grantedConsent = new ConsentResponse();
-
+                grantedConsent = ConsentResponse.Denied;
             }
             else
             {
@@ -122,8 +113,7 @@ namespace Volo.Abp.Account.Web.Pages
                     grantedConsent = new ConsentResponse
                     {
                         RememberConsent = ConsentInput.RememberConsent,
-                        //ScopesConsented = ConsentInput.GetAllowedScopeNames()
-                        ScopesValuesConsented= ConsentInput.GetAllowedScopeNames()
+                        ScopesConsented = ConsentInput.GetAllowedScopeNames()
                     };
                 }
                 else
@@ -161,19 +151,16 @@ namespace Volo.Abp.Account.Web.Pages
             };
         }
 
-        //protected virtual ConsentModel.ScopeViewModel CreateScopeViewModel(Scope scope, bool check)
-        protected virtual ConsentModel.ScopeViewModel CreateScopeViewModel(ApiResource scope, bool check)
+        protected virtual ConsentModel.ScopeViewModel CreateScopeViewModel(Scope scope, bool check)
         {
             return new ConsentModel.ScopeViewModel
             {
                 Name = scope.Name,
                 DisplayName = scope.DisplayName,
                 Description = scope.Description,
-                //Emphasize = scope.Emphasize,
-                //Required = scope.Required,
-                //Checked = check || scope.Required
-                Emphasize = true,
-                Checked = check
+                Emphasize = scope.Emphasize,
+                Required = scope.Required,
+                Checked = check || scope.Required
             };
         }
 

@@ -18,8 +18,8 @@ namespace Volo.Abp.IdentityServer
         protected IObjectMapper<AbpIdentityServerDomainModule> ObjectMapper { get; }
 
         public ResourceStore(
-            IIdentityResourceRepository identityResourceRepository,
-            IObjectMapper<AbpIdentityServerDomainModule> objectMapper,
+            IIdentityResourceRepository identityResourceRepository, 
+            IObjectMapper<AbpIdentityServerDomainModule> objectMapper, 
             IApiResourceRepository apiResourceRepository)
         {
             IdentityResourceRepository = identityResourceRepository;
@@ -27,59 +27,33 @@ namespace Volo.Abp.IdentityServer
             ApiResourceRepository = apiResourceRepository;
         }
 
-        //public virtual async Task<IEnumerable<IdentityServer4.Models.IdentityResource>> FindIdentityResourcesByScopeAsync(IEnumerable<string> scopeNames)
-        //{
-        //    var resource = await IdentityResourceRepository.GetListByScopesAsync(scopeNames.ToArray(), includeDetails: true);
-        //    return ObjectMapper.Map<List<IdentityResource>, List<IdentityServer4.Models.IdentityResource>>(resource);
-        //}
-
-        //public virtual async Task<IEnumerable<ApiResource>> FindApiResourcesByScopeAsync(IEnumerable<string> scopeNames)
-        //{
-        //    var resources = await ApiResourceRepository.GetListByScopesAsync(scopeNames.ToArray(), includeDetails: true);
-        //    return resources.Select(x => ObjectMapper.Map<ApiResources.ApiResource, ApiResource>(x));
-        //}
-
-        //public virtual async Task<ApiResource> FindApiResourceAsync(string name)
-        //{
-        //    var resource = await ApiResourceRepository.FindByNameAsync(name);
-        //    return ObjectMapper.Map<ApiResources.ApiResource, ApiResource>(resource);
-        //}
-
-        public virtual async Task<Resources> GetAllResourcesAsync()
-        {
-            var identityResources = await IdentityResourceRepository.GetListAsync(includeDetails: true);
-            var apiResources = await ApiResourceRepository.GetListAsync(includeDetails: true);
-            var apiScopes = apiResources.SelectMany(t => t.Scopes).ToList();
-
-            return new Resources(
-                ObjectMapper.Map<List<IdentityResource>, IdentityServer4.Models.IdentityResource[]>(identityResources),
-                ObjectMapper.Map<List<ApiResources.ApiResource>, IdentityServer4.Models.ApiResource[]>(apiResources),
-                ObjectMapper.Map<List<ApiResources.ApiScope>, IdentityServer4.Models.ApiScope[]>(apiScopes)
-            );
-        }
-
-        public virtual async Task<IEnumerable<IdentityServer4.Models.IdentityResource>> FindIdentityResourcesByScopeNameAsync(IEnumerable<string> scopeNames)
+        public virtual async Task<IEnumerable<IdentityServer4.Models.IdentityResource>> FindIdentityResourcesByScopeAsync(IEnumerable<string> scopeNames)
         {
             var resource = await IdentityResourceRepository.GetListByScopesAsync(scopeNames.ToArray(), includeDetails: true);
             return ObjectMapper.Map<List<IdentityResource>, List<IdentityServer4.Models.IdentityResource>>(resource);
         }
 
-        public virtual async Task<IEnumerable<IdentityServer4.Models.ApiScope>> FindApiScopesByNameAsync(IEnumerable<string> scopeNames)
+        public virtual async Task<IEnumerable<ApiResource>> FindApiResourcesByScopeAsync(IEnumerable<string> scopeNames)
         {
             var resources = await ApiResourceRepository.GetListByScopesAsync(scopeNames.ToArray(), includeDetails: true);
-            return (IEnumerable<IdentityServer4.Models.ApiScope>)ObjectMapper.Map<List<ApiResources.ApiResource>, List<ApiResource>>(resources);
+            return resources.Select(x => ObjectMapper.Map<ApiResources.ApiResource, ApiResource>(x));
         }
 
-        public virtual async Task<IEnumerable<ApiResource>> FindApiResourcesByScopeNameAsync(IEnumerable<string> scopeNames)
+        public virtual async Task<ApiResource> FindApiResourceAsync(string name)
         {
-            var resource = await ApiResourceRepository.GetListByScopesAsync(scopeNames.ToArray(), includeDetails: true);
-            return ObjectMapper.Map<List<ApiResources.ApiResource>, List<ApiResource>>(resource);
+            var resource = await ApiResourceRepository.FindByNameAsync(name);
+            return ObjectMapper.Map<ApiResources.ApiResource, ApiResource>(resource);
         }
 
-        public virtual async Task<IEnumerable<ApiResource>> FindApiResourcesByNameAsync(IEnumerable<string> apiResourceNames)
+        public virtual async Task<Resources> GetAllResourcesAsync()
         {
-            var resource = await ApiResourceRepository.GetListByScopesAsync(apiResourceNames.ToArray(), includeDetails: true);
-            return ObjectMapper.Map<List<ApiResources.ApiResource>, List<ApiResource>>(resource);
+            var identityResources = await IdentityResourceRepository.GetListAsync(includeDetails: true);
+            var apiResources = await ApiResourceRepository.GetListAsync(includeDetails: true);
+
+            return new Resources(
+                ObjectMapper.Map<List<IdentityResource>, IdentityServer4.Models.IdentityResource[]>(identityResources),
+                ObjectMapper.Map<List<ApiResources.ApiResource>, ApiResource[]>(apiResources)
+            );
         }
     }
 }

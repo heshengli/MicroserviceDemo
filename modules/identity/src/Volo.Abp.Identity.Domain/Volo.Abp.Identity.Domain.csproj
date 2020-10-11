@@ -20,8 +20,8 @@
 
     <ProjectReference Include="..\..\..\users\src\Volo.Abp.Users.Domain\Volo.Abp.Users.Domain.csproj" />
 
-    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.2.0" />
-    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="3.2.0" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="3.2.1" />
   </ItemGroup>
 
   <ItemGroup>

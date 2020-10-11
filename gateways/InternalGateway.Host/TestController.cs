@@ -22,6 +22,8 @@ namespace InternalGateway.Host
         {
             var newLine = Environment.NewLine + Environment.NewLine;
 
+            await Task.CompletedTask;
+
             return Content(
                 "Claims: " + User.Claims.Select(c => $"{c.Type} = {c.Value}").JoinAsString(" | ") + newLine +
                 "CurrentUser: " + _jsonSerializer.Serialize(CurrentUser) + newLine

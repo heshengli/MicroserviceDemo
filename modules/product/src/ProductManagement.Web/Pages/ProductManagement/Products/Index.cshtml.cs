@@ -7,6 +7,7 @@ namespace ProductManagement.Pages.ProductManagement.Products
     {
         public async Task OnGetAsync()
         {
+            await Task.CompletedTask;
         }
     }
 }

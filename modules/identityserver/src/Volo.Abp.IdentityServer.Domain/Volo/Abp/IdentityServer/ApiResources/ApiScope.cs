@@ -8,7 +8,7 @@ namespace Volo.Abp.IdentityServer.ApiResources
 {
     public class ApiScope : Entity
     {
-        //public virtual Guid ApiResourceId { get; protected set; }
+        public virtual Guid ApiResourceId { get; protected set; }
 
         [NotNull]
         public virtual string Name { get; protected set; }
@@ -17,8 +17,6 @@ namespace Volo.Abp.IdentityServer.ApiResources
 
         public virtual string Description { get; set; }
 
-        public virtual bool Enabled { get; set; }
-
         public virtual bool Required { get; set; }
 
         public virtual bool Emphasize { get; set; }
@@ -26,8 +24,6 @@ namespace Volo.Abp.IdentityServer.ApiResources
         public virtual bool ShowInDiscoveryDocument { get; set; }
 
         public virtual List<ApiScopeClaim> UserClaims { get; protected set; }
-
-        public virtual List<ApiScopeProperty> Properties { get; set; }
 
         protected ApiScope()
         {

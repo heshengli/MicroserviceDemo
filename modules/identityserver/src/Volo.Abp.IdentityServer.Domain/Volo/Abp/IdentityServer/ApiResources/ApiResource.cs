@@ -26,10 +26,6 @@ namespace Volo.Abp.IdentityServer.ApiResources
 
         public virtual Dictionary<string, string> Properties { get; protected set; }
 
-        public virtual string AllowedAccessTokenSigningAlgorithms { get; set; }
-
-        public virtual bool ShowInDiscoveryDocument { get; set; } = true;
-
         protected ApiResource()
         {
 

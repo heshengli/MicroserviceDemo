@@ -14,7 +14,7 @@
 
     <ProjectReference Include="..\..\..\feature-management\src\Volo.Abp.FeatureManagement.HttpApi\Volo.Abp.FeatureManagement.HttpApi.csproj" />
 
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="3.2.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="3.2.1" />
   </ItemGroup>
 
 </Project>

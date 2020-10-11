@@ -34,7 +34,7 @@ namespace Volo.Abp.Account.Web.Pages.Account
             IIdentityServerInteractionService interaction,
             IClientStore clientStore,
             IEventService identityServerEvents)
-            : base(
+            :base(
                 schemeProvider,
                 accountOptions)
         {
@@ -76,9 +76,9 @@ namespace Volo.Abp.Account.Web.Pages.Account
 
             EnableLocalLogin = await SettingProvider.IsTrueAsync(AccountSettingNames.EnableLocalLogin);
 
-            if (context?.Client?.ClientId != null)
+            if (context?.ClientId != null)
             {
-                var client = await ClientStore.FindEnabledClientByIdAsync(context.Client.ClientId);
+                var client = await ClientStore.FindEnabledClientByIdAsync(context.ClientId);
                 if (client != null)
                 {
                     EnableLocalLogin = client.EnableLocalLogin;
@@ -108,9 +108,7 @@ namespace Volo.Abp.Account.Web.Pages.Account
                     return Redirect("~/");
                 }
 
-                //await Interaction.GrantConsentAsync(context, ConsentResponse.Denied);
-                await Interaction.GrantConsentAsync(context, new ConsentResponse());
-
+                await Interaction.GrantConsentAsync(context, ConsentResponse.Denied);
 
                 return Redirect(ReturnUrl);
             }

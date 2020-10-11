@@ -16,6 +16,8 @@ namespace Volo.Abp.TenantManagement
                 new TenantConnectionString(Guid.NewGuid(), "MyConnString", "MyConnString-Value");
             tenantConnectionString.SetValue(value);
             tenantConnectionString.Value.ShouldBe(value);
+
+            await Task.CompletedTask;
         }
     }
 }

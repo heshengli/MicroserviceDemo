@@ -26,8 +26,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Volo.Abp.FeatureManagement.HttpApi\Volo.Abp.FeatureManagement.HttpApi.csproj" />
 
-    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.2.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="3.2.0" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="3.2.1" />
   </ItemGroup>
 
 </Project>

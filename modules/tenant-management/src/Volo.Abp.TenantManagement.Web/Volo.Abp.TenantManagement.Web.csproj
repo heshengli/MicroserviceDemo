@@ -25,8 +25,8 @@
     <ProjectReference Include="..\..\..\feature-management\src\Volo.Abp.FeatureManagement.Web\Volo.Abp.FeatureManagement.Web.csproj" />
     <ProjectReference Include="..\Volo.Abp.TenantManagement.HttpApi\Volo.Abp.TenantManagement.HttpApi.csproj" />
 
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Bootstrap" Version="3.2.0" />
-    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.2.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Bootstrap" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.2.1" />
   </ItemGroup>
 
   <ItemGroup>

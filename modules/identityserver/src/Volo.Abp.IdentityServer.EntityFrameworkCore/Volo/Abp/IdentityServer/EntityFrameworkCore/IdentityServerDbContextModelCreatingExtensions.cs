@@ -334,8 +334,12 @@ namespace Volo.Abp.IdentityServer.EntityFrameworkCore
         {
             foreach (var provider in providers)
             {
-                if (options.DatabaseProvider == EfCoreDatabaseProvider.MySql ||
-                    modelBuilder.GetDatabaseProvider() == provider)
+                //if (options.DatabaseProvider == EfCoreDatabaseProvider.MySql ||
+                //    modelBuilder.GetDatabaseProvider() == provider)
+                //{
+                //    return true;
+                //}
+                if (modelBuilder.GetDatabaseProvider() == provider)
                 {
                     return true;
                 }

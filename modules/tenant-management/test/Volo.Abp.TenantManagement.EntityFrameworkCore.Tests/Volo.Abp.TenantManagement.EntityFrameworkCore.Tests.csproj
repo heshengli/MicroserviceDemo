@@ -14,7 +14,7 @@
     <ProjectReference Include="..\Volo.Abp.TenantManagement.TestBase\Volo.Abp.TenantManagement.TestBase.csproj" />
     <ProjectReference Include="..\..\src\Volo.Abp.TenantManagement.EntityFrameworkCore\Volo.Abp.TenantManagement.EntityFrameworkCore.csproj" />
 
-    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="3.2.0" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="3.2.1" />
 
   </ItemGroup>
 

@@ -44,11 +44,11 @@ namespace Volo.Abp.IdentityServer.Grants
             return ObjectMapper.Map<PersistedGrant, IdentityServer4.Models.PersistedGrant>(persistedGrant);
         }
 
-        //public virtual async Task<IEnumerable<IdentityServer4.Models.PersistedGrant>> GetAllAsync(string subjectId)
-        //{
-        //    var persistedGrants = await PersistentGrantRepository.GetListBySubjectIdAsync(subjectId);
-        //    return persistedGrants.Select(x => ObjectMapper.Map<PersistedGrant, IdentityServer4.Models.PersistedGrant>(x));
-        //}
+        public virtual async Task<IEnumerable<IdentityServer4.Models.PersistedGrant>> GetAllAsync(string subjectId)
+        {
+            var persistedGrants = await PersistentGrantRepository.GetListBySubjectIdAsync(subjectId);
+            return persistedGrants.Select(x => ObjectMapper.Map<PersistedGrant, IdentityServer4.Models.PersistedGrant>(x));
+        }
 
         public virtual async Task RemoveAsync(string key)
         {
@@ -61,25 +61,14 @@ namespace Volo.Abp.IdentityServer.Grants
             await PersistentGrantRepository.DeleteAsync(persistedGrant);
         }
 
-        //public virtual async Task RemoveAllAsync(string subjectId, string clientId)
-        //{
-        //    await PersistentGrantRepository.DeleteAsync(subjectId, clientId);
-        //}
-
-        //public virtual async Task RemoveAllAsync(string subjectId, string clientId, string type)
-        //{
-        //    await PersistentGrantRepository.DeleteAsync(subjectId, clientId, type);
-        //}
-
-        public virtual async Task<IEnumerable<IdentityServer4.Models.PersistedGrant>> GetAllAsync(PersistedGrantFilter filter)
+        public virtual async Task RemoveAllAsync(string subjectId, string clientId)
         {
-            var persistedGrants = await PersistentGrantRepository.GetListBySubjectIdAsync(filter.SessionId);
-            return persistedGrants.Select(x => ObjectMapper.Map<PersistedGrant, IdentityServer4.Models.PersistedGrant>(x));
+            await PersistentGrantRepository.DeleteAsync(subjectId, clientId);
         }
 
-        public virtual async Task RemoveAllAsync(PersistedGrantFilter filter)
+        public virtual async Task RemoveAllAsync(string subjectId, string clientId, string type)
         {
-            await PersistentGrantRepository.DeleteAsync(filter.SessionId, filter.ClientId, filter.Type);
+            await PersistentGrantRepository.DeleteAsync(subjectId, clientId, type);
         }
     }
 }
