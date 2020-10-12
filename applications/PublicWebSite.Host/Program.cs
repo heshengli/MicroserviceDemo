@@ -27,6 +27,7 @@ namespace PublicWebSite.Host
                 .Enrich.WithProperty("Application", "PublicWebSite")
                 .Enrich.FromLogContext()
                 .WriteTo.File("Logs/logs.txt")
+                .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information)//日志打印到cmd              
                 //.WriteTo.Elasticsearch(
                 //    new ElasticsearchSinkOptions(new Uri(configuration["ElasticSearch:Url"]))
                 //    {
