@@ -338,3 +338,10 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/applications/PublicWebSite.Host/Logs
+/gateways/BackendAdminAppGateway.Host/Logs
+/gateways/InternalGateway.Host/Logs
+/gateways/PublicWebSiteGateway.Host/Logs
+/microservices/IdentityService.Host/Logs
+/microservices/TenantManagementService.Host/Logs
+/microservices/ProductService.Host/Logs
