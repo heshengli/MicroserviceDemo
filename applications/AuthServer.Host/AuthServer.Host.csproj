@@ -60,4 +60,14 @@
         <None Remove="Logs\**" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="tempkey.rsa" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="tempkey.rsa">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
