@@ -345,3 +345,5 @@ healthchecksdb
 /microservices/IdentityService.Host/Logs
 /microservices/TenantManagementService.Host/Logs
 /microservices/ProductService.Host/Logs
+/applications/AuthServer.Host/Logs
+/applications/BackendAdminApp.Host/Logs

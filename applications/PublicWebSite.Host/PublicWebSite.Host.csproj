@@ -30,7 +30,7 @@
     <PackageReference Include="Volo.Blogging.HttpApi.Client" Version="3.2.1" />
     <PackageReference Include="Volo.Blogging.Web" Version="3.2.1" />
 
-    <ProjectReference Include="..\..\modules\product\src\ProductManagement.HttpApi.Client\ProductManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\modules\product\src\ProductManagement.HttpApi.Client\ProductManagement.HttpApi.Client.csproj" />    
     <ProjectReference Include="..\..\shared\MsDemo.Shared\MsDemo.Shared.csproj" />
   </ItemGroup>
 

@@ -39,7 +39,8 @@ namespace PublicWebSite.Host
 
             Configure<AbpLocalizationOptions>(options =>
             {
-                options.Languages.Add(new LanguageInfo("en", "en", "English"));
+                //options.Languages.Add(new LanguageInfo("en", "en", "English"));
+                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "¼òÌåÖÐÎÄ"));
             });
 
             Configure<AbpMultiTenancyOptions>(options =>

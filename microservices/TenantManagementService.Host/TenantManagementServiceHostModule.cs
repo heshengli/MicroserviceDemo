@@ -71,7 +71,8 @@ namespace TenantManagementService.Host
 
             Configure<AbpLocalizationOptions>(options =>
             {
-                options.Languages.Add(new LanguageInfo("en", "en", "English"));
+                //options.Languages.Add(new LanguageInfo("en", "en", "English"));
+                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "¼òÌåÖÐÎÄ"));
             });
 
             Configure<AbpDistributedEntityEventOptions>(options =>
