@@ -18,27 +18,27 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
         <PackageReference Include="Ocelot" Version="16.0.1" />
         <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
-        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="3.1.8" />
-        <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="3.1.9" />
+        <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="3.1.9" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Volo.Abp.Autofac" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.Http.Client.IdentityModel.Web" Version="3.2.1" />
-        <!--<PackageReference Include="Volo.Abp.Identity.HttpApi" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.Identity.HttpApi.Client" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.PermissionManagement.Domain.IdentityServer" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.FeatureManagement.EntityFrameworkCore" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="3.2.1" />-->
-        <PackageReference Include="Volo.Blogging.Application.Contracts" Version="3.2.1" />
+        <PackageReference Include="Volo.Abp.Autofac" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.Http.Client.IdentityModel.Web" Version="3.3.0" />
+        <!--<PackageReference Include="Volo.Abp.Identity.HttpApi" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.Identity.HttpApi.Client" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.PermissionManagement.Domain.IdentityServer" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.FeatureManagement.EntityFrameworkCore" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="3.3.0" />-->
+        <PackageReference Include="Volo.Blogging.Application.Contracts" Version="3.3.0" />
         <ProjectReference Include="..\..\modules\feature-management\src\Volo.Abp.FeatureManagement.Application\Volo.Abp.FeatureManagement.Application.csproj" />
         <ProjectReference Include="..\..\modules\feature-management\src\Volo.Abp.FeatureManagement.EntityFrameworkCore\Volo.Abp.FeatureManagement.EntityFrameworkCore.csproj" />
         <ProjectReference Include="..\..\modules\feature-management\src\Volo.Abp.FeatureManagement.HttpApi\Volo.Abp.FeatureManagement.HttpApi.csproj" />
@@ -49,10 +49,10 @@
         <ProjectReference Include="..\..\modules\permission-management\src\Volo.Abp.PermissionManagement.Application\Volo.Abp.PermissionManagement.Application.csproj" />
         <ProjectReference Include="..\..\modules\permission-management\src\Volo.Abp.PermissionManagement.EntityFrameworkCore\Volo.Abp.PermissionManagement.EntityFrameworkCore.csproj" />
         <ProjectReference Include="..\..\modules\permission-management\src\Volo.Abp.PermissionManagement.HttpApi\Volo.Abp.PermissionManagement.HttpApi.csproj" />
-        <!--<PackageReference Include="Volo.Abp.TenantManagement.Application.Contracts" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.TenantManagement.HttpApi.Client" Version="3.2.1" />
-        <PackageReference Include="Volo.Abp.TenantManagement.EntityFrameworkCore" Version="3.2.1" />-->
+        <!--<PackageReference Include="Volo.Abp.TenantManagement.Application.Contracts" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.TenantManagement.HttpApi.Client" Version="3.3.0" />
+        <PackageReference Include="Volo.Abp.TenantManagement.EntityFrameworkCore" Version="3.3.0" />-->
 
         <ProjectReference Include="..\..\modules\product\src\ProductManagement.HttpApi\ProductManagement.HttpApi.csproj" />
 

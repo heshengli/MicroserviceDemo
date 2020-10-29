@@ -14,8 +14,8 @@
     <ProjectReference Include="..\..\src\Volo.Abp.Identity.AspNetCore\Volo.Abp.Identity.AspNetCore.csproj" />
     <ProjectReference Include="..\Volo.Abp.Identity.Domain.Tests\Volo.Abp.Identity.Domain.Tests.csproj" />
 
-    <PackageReference Include="Volo.Abp.AspNetCore.TestBase" Version="3.2.1" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.TestBase" Version="3.3.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="3.3.0" />
   </ItemGroup>
 
   <ItemGroup>
